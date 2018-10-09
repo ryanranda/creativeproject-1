@@ -6,7 +6,7 @@
 
     <head>
 
-    <title>jquery play template</title>
+    <title>Movie Poster Gallery</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js">
 </script>
 
@@ -34,7 +34,7 @@
 		padding: 0px;
 		background-color: #ffffff; 
 		background-repeat: no-repeat; 
-		width: 325px;
+		width: 300px;
 		height: 450px;
 		border: 2px solid #000000;
 		overflow: hidden;
@@ -51,6 +51,7 @@
 		width: 400px; 
 		border: 0px solid #000000; 
 		padding: 10px; 
+		text-align: center;
 		}	
 		
 		
@@ -122,12 +123,17 @@
 			let imgDescrip = imgArray[i][1];
 			$("#box").fadeOut(1000, function() {
 				$(this).html(`<img src ="${imgUrl}">`);
-			}).fadeIn(1000);
+			}).fadeIn(1000).delay(2000);
+
+			$("p").fadeOut(1000, function() {
+					$(this).html(`imgDescrip`);
+				}).fadeIn(1000).delay(2000);
+
 		}
 	}
 
 let dramaArray = [
-		['images/drama1.jpeg','Frankenstein'],
+		['images/drama1.jpg','Frankenstein'],
 		['images/drama2.jpg','Texas Chainsaw Massacre'],
 		['images/drama3.jpg','The Black Beetle'],
 		['images/drama4.jpg','Texas Chainsaw Massacre'],
@@ -166,7 +172,7 @@ let animatedArray = [
     ul = document.getElementById("myUL");
     li = ul.getElementsByTagName('li');
 
-    // FIGURE OUT HOW TO ACCESS ARRAYS if ("myInput" = 'horror') {
+   
     	document.getElementByArray.innerHTML
     }  
 
